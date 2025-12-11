@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NovaVisa - Vize Danışmanlığı</title>
+  <meta name="description" content="NovaVisa - Profesyonel vize danışmanlığı, evrak hazırlama, randevu ve süreç takibi." />
+
+  <style>
+    :root{
+      --indigo:#4f46e5;
+      --indigo-600:#4338ca;
+      --muted:#6b7280;
+      --bg:#f8fafc;
+      --card:#eef2ff;
+      --radius:16px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;color:#0f172a;background:var(--bg);line-height:1.55}
+    a{color:inherit;text-decoration:none}
+
+    .container{max-width:1100px;margin:0 auto;padding:0 20px}
+
+    /* Header */
+    header{position:fixed;top:0;left:0;right:0;background:#fff;box-shadow:0 4px 18px rgba(2,6,23,0.08);z-index:60}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{font-weight:700;color:var(--indigo);font-size:20px}
+    nav.desktop{display:none}
+    .menu-btn{background:transparent;border:0;font-size:20px}
+
+    /* Hero */
+    .hero{padding:120px 0 60px;text-align:center;background:linear-gradient(180deg, #eef2ff 0%, transparent 100%)}
+    .hero h1{font-size:36px;margin:0 0 18px}
+    .hero p{color:var(--muted);max-width:820px;margin:0 auto 22px;font-size:18px}
+    .btn{display:inline-block;padding:12px 28px;border-radius:999px;background:var(--indigo);color:#fff;font-weight:600}
+
+    /* Services */
+    .section{padding:56px 0}
+    .section h2{text-align:center;margin-bottom:28px;font-size:26px}
+    .cards{display:grid;gap:18px}
+    .card{background:var(--card);padding:22px;border-radius:var(--radius);box-shadow:0 10px 30px rgba(15,23,42,0.06)}
+    .card h3{margin:8px 0}
+    .card p{color:var(--muted)}
+
+    /* About */
+    .about{display:grid;gap:24px;align-items:center}
+    .about img{width:100%;border-radius:12px;display:block}
+
+    /* Contact */
+    .contact-grid{display:grid;gap:14px}
+    .contact-item{background:#fff;padding:18px;border-radius:12px;display:flex;align-items:flex-start;gap:12px;box-shadow:0 6px 20px rgba(2,6,23,0.04)}
+
+    footer{background:var(--indigo);color:#fff;padding:18px 0;text-align:center;margin-top:32px}
+
+    /* Responsive */
+    @media(min-width:768px){
+      .menu-btn{display:none}
+      nav.desktop{display:flex;gap:20px}
+      .hero h1{font-size:44px}
+      .cards{grid-template-columns:repeat(3,1fr)}
+      .about{grid-template-columns:1fr 1fr}
+      .contact-grid{grid-template-columns:repeat(3,1fr)}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav-inner">
+      <div class="brand">NovaVisa</div>
+      <nav class="desktop" aria-label="Ana Navigasyon">
+        <a href="#services">Hizmetler</a>
+        <a href="#about">Hakkımızda</a>
+        <a href="#contact">İletişim</a>
+      </nav>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false">☰</button>
+    </div>
+    <div id="mobileMenu" style="display:none;padding:10px 20px;border-top:1px solid #eef2ff;background:#fff">
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <a href="#services">Hizmetler</a>
+        <a href="#about">Hakkımızda</a>
+        <a href="#contact">İletişim</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>NovaVisa ile Vize Süreciniz Güvende</h1>
+        <p>Profesyonel danışmanlık, hızlı süreç yönetimi ve güvenilir rehberlik ile dünya ülkelerine vize başvurularınızı kolaylaştırıyoruz.</p>
+        <p><a class="btn" href="#contact">Hemen İletişime Geç</a></p>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="container">
+        <h2>Hizmetlerimiz</h2>
+        <div class="cards">
+          <div class="card">
+            <div style="font-size:28px">✔</div>
+            <h3>Turistik Vize</h3>
+            <p>Turistik vize başvurularında profesyonel evrak hazırlama, randevu alma ve süreç takibi hizmeti sunuyoruz.</p>
+          </div>
+          <div class="card">
+            <div style="font-size:28px">✔</div>
+            <h3>Öğrenci Vizesi</h3>
+            <p>Öğrenci vizesi başvurularında danışmanlık, üniversite evrakları desteği ve takip sağlıyoruz.</p>
+          </div>
+          <div class="card">
+            <div style="font-size:28px">✔</div>
+            <h3>Çalışma Vizesi</h3>
+            <p>Çalışma vizesi süreçlerinde işveren belgeleri, başvuru takibi ve sınırlı danışmanlık hizmeti veriyoruz.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section" style="background:transparent;">
+      <div class="container about">
+        <div>
+          <h2>NovaVisa Hakkında</h2>
+          <p>NovaVisa, uluslararası seyahatleriniz için ihtiyaç duyduğunuz tüm vize süreçlerinde size rehberlik eden profesyonel bir danışmanlık şirketidir. Deneyimli ekibimiz ile süreci en hızlı ve sorunsuz şekilde yönetiyoruz.</p>
+        </div>
+        <div>
+          <img src="https://images.unsplash.com/photo-1522199755839-a2bacb67c546?w=1200&q=80&auto=format&fit=crop" alt="Vize danışmanlığı görseli">
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section" style="background:#fff;padding-bottom:80px;">
+      <div class="container">
+        <h2 style="text-align:center">İletişim</h2>
+        <div class="contact-grid" style="margin-top:18px">
+          <div class="contact-item"><div style="font-size:20px">📞</div><div><strong>Telefon</strong><div style="color:var(--muted)">+90 5XX XXX XX XX</div></div></div>
+          <div class="contact-item"><div style="font-size:20px">✉️</div><div><strong>E-posta</strong><div style="color:var(--muted)">info@novavisa.com</div></div></div>
+          <div class="contact-item"><div style="font-size:20px">📍</div><div><strong>Adres</strong><div style="color:var(--muted)">İstanbul, Türkiye</div></div></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">© <span id="year"></span> NovaVisa. Tüm hakları saklıdır.</div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', ()=>{
+      const open = mobileMenu.style.display === 'block';
+      mobileMenu.style.display = open ? 'none' : 'block';
+      menuBtn.setAttribute('aria-expanded', String(!open));
+    });
+
+    // Set current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Smooth scroll for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const target = a.getAttribute('href');
+        if(target.length>1){
+          e.preventDefault();
+          document.querySelector(target).scrollIntoView({behavior:'smooth',block:'start'});
+          // close mobile menu if open
+          if(window.innerWidth < 768) mobileMenu.style.display='none';
+        }
+      })
+    })
+  </script>
+</body>
+</html>
