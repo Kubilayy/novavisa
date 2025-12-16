@@ -1,175 +1,1181 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>NovaVisa - Vize Danışmanlığı</title>
-  <meta name="description" content="NovaVisa - Profesyonel vize danışmanlığı, evrak hazırlama, randevu ve süreç takibi." />
-
-  <style>
-    :root{
-      --indigo:#4f46e5;
-      --indigo-600:#4338ca;
-      --muted:#6b7280;
-      --bg:#f8fafc;
-      --card:#eef2ff;
-      --radius:16px;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-    }
-    *{box-sizing:border-box}
-    body{margin:0;color:#0f172a;background:var(--bg);line-height:1.55}
-    a{color:inherit;text-decoration:none}
-
-    .container{max-width:1100px;margin:0 auto;padding:0 20px}
-
-    /* Header */
-    header{position:fixed;top:0;left:0;right:0;background:#fff;box-shadow:0 4px 18px rgba(2,6,23,0.08);z-index:60}
-    .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
-    .brand{font-weight:700;color:var(--indigo);font-size:20px}
-    nav.desktop{display:none}
-    .menu-btn{background:transparent;border:0;font-size:20px}
-
-    /* Hero */
-    .hero{padding:120px 0 60px;text-align:center;background:linear-gradient(180deg, #eef2ff 0%, transparent 100%)}
-    .hero h1{font-size:36px;margin:0 0 18px}
-    .hero p{color:var(--muted);max-width:820px;margin:0 auto 22px;font-size:18px}
-    .btn{display:inline-block;padding:12px 28px;border-radius:999px;background:var(--indigo);color:#fff;font-weight:600}
-
-    /* Services */
-    .section{padding:56px 0}
-    .section h2{text-align:center;margin-bottom:28px;font-size:26px}
-    .cards{display:grid;gap:18px}
-    .card{background:var(--card);padding:22px;border-radius:var(--radius);box-shadow:0 10px 30px rgba(15,23,42,0.06)}
-    .card h3{margin:8px 0}
-    .card p{color:var(--muted)}
-
-    /* About */
-    .about{display:grid;gap:24px;align-items:center}
-    .about img{width:100%;border-radius:12px;display:block}
-
-    /* Contact */
-    .contact-grid{display:grid;gap:14px}
-    .contact-item{background:#fff;padding:18px;border-radius:12px;display:flex;align-items:flex-start;gap:12px;box-shadow:0 6px 20px rgba(2,6,23,0.04)}
-
-    footer{background:var(--indigo);color:#fff;padding:18px 0;text-align:center;margin-top:32px}
-
-    /* Responsive */
-    @media(min-width:768px){
-      .menu-btn{display:none}
-      nav.desktop{display:flex;gap:20px}
-      .hero h1{font-size:44px}
-      .cards{grid-template-columns:repeat(3,1fr)}
-      .about{grid-template-columns:1fr 1fr}
-      .contact-grid{grid-template-columns:repeat(3,1fr)}
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NovaVisa - Profesyonel Vize Danışmanlığı</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --turuncu: #FF6B35;
+            --turuncu-acik: #FF8E5E;
+            --turuncu-koyu: #E55A2B;
+            --ekru: #F5E9D9;
+            --ekru-koyu: #E8DBC5;
+            --koyu-gri: #333333;
+            --acik-gri: #F8F8F8;
+            --beyaz: #FFFFFF;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--acik-gri);
+            color: var(--koyu-gri);
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Stili */
+        header {
+            background-color: var(--beyaz);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo h1 {
+            color: var(--turuncu);
+            font-size: 32px; /* 28px'ten 32px'e büyütüldü */
+            margin-left: 0; /* margin-left'i azaltabiliriz */
+}
+        
+        .logo .nova {
+            color: #32CD32; /* Çimen yeşili */
+}
+        
+        .logo .visa {
+            color: var(--turuncu);
+        }
+        
+        .logo-img {
+            width: 45px; /* 40px'ten 45px'e büyütüldü */
+            height: 45px;
+            margin-right: 15px; /* 12px'ten 15px'e çıkarıldı */
+            vertical-align: middle;
+            object-fit: contain;
+}
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            position: relative;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+            position: relative;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--koyu-gri);
+            font-weight: 600;
+            font-size: 17px;
+            transition: color 0.3s;
+            display: flex;
+            align-items: center;
+        }
+        
+        nav ul li a:hover {
+            color: var(--turuncu);
+        }
+        
+        /* Hizmetlerimiz Dropdown Menü */
+        .dropdown {
+            position: relative;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: var(--beyaz);
+            min-width: 220px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            border-radius: 5px;
+            z-index: 1000;
+            top: 100%;
+            left: 0;
+            overflow: hidden;
+        }
+        
+        .dropdown-content a {
+            color: var(--koyu-gri);
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            border-bottom: 1px solid var(--ekru);
+            transition: all 0.3s;
+        }
+        
+        .dropdown-content a:last-child {
+            border-bottom: none;
+        }
+        
+        .dropdown-content a:hover {
+            background-color: var(--ekru);
+            color: var(--turuncu);
+            padding-left: 20px;
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        
+        .dropdown-arrow {
+            margin-left: 5px;
+            font-size: 12px;
+            transition: transform 0.3s;
+        }
+        
+        .dropdown:hover .dropdown-arrow {
+            transform: rotate(180deg);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: var(--turuncu);
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(to right, var(--ekru) 50%, var(--turuncu) 50%);
+            padding: 80px 0;
+            color: var(--koyu-gri);
+        }
+        
+        .hero-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .hero-content {
+            flex: 1;
+            padding-right: 40px;
+        }
+        
+        .hero-content h2 {
+            font-size: 42px;
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+        
+        .hero-content .slogan {
+            font-size: 24px;
+            font-weight: 600;
+            color: #000000; /* Siyah renk */
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        
+        .hero-content p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: var(--koyu-gri);
+        }
+        
+        .hero-image {
+            flex: 1;
+            text-align: center;
+        }
+        
+        .hero-image img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Buton Stili */
+        .btn {
+            display: inline-block;
+            background-color: var(--turuncu);
+            color: var(--beyaz);
+            padding: 14px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: var(--turuncu-koyu);
+        }
+        
+        .btn-ekru {
+            background-color: var(--ekru);
+            color: var(--koyu-gri);
+        }
+        
+        .btn-ekru:hover {
+            background-color: var(--ekru-koyu);
+        }
+        
+        /* Hizmetler Bölümü */
+        .services {
+            padding: 80px 0;
+            background-color: var(--beyaz);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 36px;
+            color: var(--turuncu);
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            color: var(--koyu-gri);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background-color: var(--ekru);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-icon {
+            background-color: var(--turuncu);
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        .service-icon i {
+            font-size: 30px;
+            color: var(--beyaz);
+        }
+        
+        .service-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: var(--koyu-gri);
+        }
+        
+        .service-card p {
+            margin-bottom: 20px;
+            color: var(--koyu-gri);
+        }
+        
+        /* İletişim Bölümü */
+        .contact {
+            padding: 80px 0;
+            background-color: var(--beyaz);
+        }
+        
+        .contact-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        
+        .contact-info {
+            flex: 1;
+            padding-right: 40px;
+        }
+        
+        .contact-info h3 {
+            font-size: 28px;
+            color: var(--turuncu);
+            margin-bottom: 20px;
+        }
+        
+        .contact-details {
+            margin-top: 30px;
+        }
+        
+        .contact-detail {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .contact-detail i {
+            background-color: var(--ekru);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            color: var(--turuncu);
+            font-size: 20px;
+        }
+        
+        .whatsapp-icon {
+            background-color: #25D366 !important;
+            color: white !important;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--koyu-gri);
+            color: var(--beyaz);
+            padding: 50px 0 20px;
+        }
+        
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .footer-column {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 30px;
+            padding-right: 20px;
+        }
+        
+        .footer-column h3 {
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: var(--turuncu);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: var(--ekru);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: var(--turuncu);
+        }
+        
+        .social-links {
+            display: flex;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: var(--turuncu);
+            border-radius: 50%;
+            margin-right: 10px;
+            color: var(--beyaz);
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--turuncu-acik);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            margin-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 14px;
+            color: var(--ekru);
+        }
+        
+        /* Detay Sayfası Stilleri */
+        .detail-page {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 2000;
+            overflow-y: auto;
+            padding: 20px;
+        }
+        
+        .detail-content {
+            background-color: var(--beyaz);
+            max-width: 800px;
+            margin: 50px auto;
+            border-radius: 10px;
+            padding: 40px;
+            position: relative;
+        }
+        
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: var(--turuncu);
+            cursor: pointer;
+        }
+        
+        .detail-content h2 {
+            color: var(--turuncu);
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        
+        .detail-content h3 {
+            color: var(--koyu-gri);
+            margin: 25px 0 15px;
+            font-size: 24px;
+        }
+        
+        .detail-content p {
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+        
+        .detail-content ul {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .detail-content li {
+            margin-bottom: 10px;
+        }
+        
+        /* Responsive Tasarım */
+        @media (max-width: 992px) {
+            .hero-container {
+                flex-direction: column;
+            }
+            
+            .hero-content {
+                padding-right: 0;
+                margin-bottom: 40px;
+                text-align: center;
+            }
+            
+            .contact-container {
+                flex-direction: column;
+            }
+            
+            .contact-info {
+                padding-right: 0;
+                margin-bottom: 40px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--beyaz);
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+                z-index: 1000;
+            }
+            
+            nav ul.active {
+                display: flex;
+            }
+            
+            nav ul li {
+                margin: 10px 0;
+            }
+            
+            .dropdown-content {
+                position: static;
+                box-shadow: none;
+                display: none;
+                margin-top: 10px;
+                margin-left: 20px;
+            }
+            
+            .dropdown.active .dropdown-content {
+                display: block;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-content h2 {
+                font-size: 32px;
+            }
+            
+            .hero-content .slogan {
+                font-size: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <div class="container nav-inner">
-      <div class="brand">NovaVisa</div>
-      <nav class="desktop" aria-label="Ana Navigasyon">
-        <a href="#services">Hizmetler</a>
-        <a href="#about">Hakkımızda</a>
-        <a href="#contact">İletişim</a>
-      </nav>
-      <button class="menu-btn" id="menuBtn" aria-expanded="false">☰</button>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="nova_logo.png" alt="NovaVisa Logo" class="logo-img">
+                <h1><span class="nova">Nova</span><span class="visa">Visa</span></h1>
+            </div>
+            
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav>
+                <ul>
+                    <li><a href="#home">Ana Sayfa</a></li>
+                    <li class="dropdown">
+                        <a href="#services">Hizmetlerimiz <span class="dropdown-arrow"><i class="fas fa-chevron-down"></i></span></a>
+                        <div class="dropdown-content">
+                            <a href="#schengen-service">Schengen Vizesi</a>
+                            <a href="#usa-service">ABD Vizesi</a>
+                            <a href="#student-service">Öğrenci Vizesi</a>
+                            <a href="#work-service">İş Vizesi</a>
+                            <a href="#tourist-service">Turist Vizesi</a>
+                            <a href="#documents-service">Vize Dosyası Hazırlama</a>
+                        </div>
+                    </li>
+                    <li><a href="#contact">İletişim</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h2>Profesyonel Vize Danışmanlığı</h2>
+                <div class="slogan">"Dünyaya açılan en doğru adımı NovaVisa ile atın"</div>
+                <p>NovaVisa olarak, seyahat etmek istediğiniz ülkelere vize alım sürecinizde yanınızdayız. Yılların deneyimi ve uzman ekibimizle vize başvurularınızı sorunsuz hale getiriyoruz.</p>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=750&q=80" alt="Vize Danışmanlığı">
+            </div>
+        </div>
+    </section>
+
+    <!-- Hizmetlerimiz Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Hizmetlerimiz</h2>
+                <p>NovaVisa olarak sunduğumuz kapsamlı vize danışmanlık hizmetlerimiz ile yurtdışı seyahatlerinizi planlarken yanınızdayız.</p>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Hizmet 1 -->
+                <div class="service-card" id="schengen-service">
+                    <div class="service-icon">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <h3>Schengen Vizesi</h3>
+                    <p>Avrupa'ya seyahat etmek isteyenler için Schengen vizesi başvuru süreçlerinde profesyonel destek sağlıyoruz.</p>
+                    <button class="btn btn-ekru detay-btn" data-service="schengen">Detaylı Bilgi</button>
+                </div>
+                
+                <!-- Hizmet 2 -->
+                <div class="service-card" id="usa-service">
+                    <div class="service-icon">
+                        <i class="fas fa-landmark"></i>
+                    </div>
+                    <h3>ABD Vizesi</h3>
+                    <p>Amerika Birleşik Devletleri'ne turist, öğrenci veya iş vizesi başvurularında uzman danışmanlık hizmeti sunuyoruz.</p>
+                    <button class="btn btn-ekru detay-btn" data-service="usa">Detaylı Bilgi</button>
+                </div>
+                
+                <!-- Hizmet 3 -->
+                <div class="service-card" id="student-service">
+                    <div class="service-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Öğrenci Vizesi</h3>
+                    <p>Yurtdışında eğitim almak isteyen öğrencilerimiz için öğrenci vizesi başvuru süreçlerinde kapsamlı destek veriyoruz.</p>
+                    <button class="btn btn-ekru detay-btn" data-service="student">Detaylı Bilgi</button>
+                </div>
+                
+                <!-- Hizmet 4 -->
+                <div class="service-card" id="work-service">
+                    <div class="service-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>İş Vizesi</h3>
+                    <p>Yurtdışında çalışmak veya iş toplantılarına katılmak isteyenler için iş vizesi başvurularında danışmanlık sağlıyoruz.</p>
+                    <button class="btn btn-ekru detay-btn" data-service="work">Detaylı Bilgi</button>
+                </div>
+                
+                <!-- Hizmet 5 -->
+                <div class="service-card" id="tourist-service">
+                    <div class="service-icon">
+                        <i class="fas fa-umbrella-beach"></i>
+                    </div>
+                    <h3>Turist Vizesi</h3>
+                    <p>Dünyanın dört bir yanına turistik seyahatler için ihtiyaç duyulan vize başvurularında profesyonel destek sunuyoruz.</p>
+                    <button class="btn btn-ekru detay-btn" data-service="tourist">Detaylı Bilgi</button>
+                </div>
+                
+                <!-- Hizmet 6 -->
+                <div class="service-card" id="documents-service">
+                    <div class="service-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>Vize Dosyası Hazırlama</h3>
+                    <p>Eksiksiz ve düzenli bir vize dosyası oluşturmanız için gerekli tüm belgelerin hazırlanmasında size rehberlik ediyoruz.</p>
+                    <button class="btn btn-ekru detay-btn" data-service="documents">Detaylı Bilgi</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- İletişim Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>İletişim</h2>
+                <p>Vize danışmanlığı hizmetlerimiz hakkında daha fazla bilgi almak için bizimle iletişime geçin.</p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Bizimle İletişime Geçin</h3>
+                    <p>NovaVisa olarak, vize başvuru süreçlerinizde size en iyi şekilde yardımcı olmak için buradayız. Aşağıdaki iletişim kanallarından bize ulaşabilirsiniz.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-detail">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Adres</h4>
+                                <p>İstanbul, Türkiye</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-detail">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Telefon</h4>
+                                <p>+90 (212) 123 45 67</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-detail">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>E-posta</h4>
+                                <p>info@novavisa.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-detail">
+                            <a href="https://wa.me/905551234567" target="_blank" style="text-decoration: none; color: inherit;">
+                                <i class="fab fa-whatsapp whatsapp-icon"></i>
+                                <div>
+                                    <h4>WhatsApp</h4>
+                                    <p>+90 (555) 123 45 67</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-column">
+                <h3>NovaVisa</h3>
+                <p>Profesyonel vize danışmanlığı hizmeti ile yurtdışı seyahatlerinizde yanınızdayız. Hayallerinize giden yolda size rehberlik ediyoruz.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://wa.me/905551234567" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Hızlı Bağlantılar</h3>
+                <ul class="footer-links">
+                    <li><a href="#home">Ana Sayfa</a></li>
+                    <li><a href="#services">Hizmetlerimiz</a></li>
+                    <li><a href="#contact">İletişim</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Hizmetlerimiz</h3>
+                <ul class="footer-links">
+                    <li><a href="#schengen-service" class="service-link">Schengen Vizesi</a></li>
+                    <li><a href="#usa-service" class="service-link">ABD Vizesi</a></li>
+                    <li><a href="#student-service" class="service-link">Öğrenci Vizesi</a></li>
+                    <li><a href="#work-service" class="service-link">İş Vizesi</a></li>
+                    <li><a href="#tourist-service" class="service-link">Turist Vizesi</a></li>
+                    <li><a href="#documents-service" class="service-link">Vize Dosyası Hazırlama</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Çalışma Saatleri</h3>
+                <p>Pazartesi - Cuma: 09:00 - 18:00</p>
+                <p>Cumartesi: 10:00 - 16:00</p>
+                <p>Pazar: Kapalı</p>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="copyright">
+                <p>&copy; 2023 NovaVisa. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Detay Sayfaları -->
+    
+    <!-- Schengen Vizesi Detay -->
+    <div id="detail-schengen" class="detail-page">
+        <div class="detail-content">
+            <button class="close-btn"><i class="fas fa-times"></i></button>
+            <h2>Schengen Vizesi</h2>
+            <p>Schengen vizesi, Avrupa'da yer alan Schengen bölgesi ülkelerine seyahat etmek isteyenler için gereklidir. Bu vize ile 26 Avrupa ülkesine seyahat edebilirsiniz.</p>
+            
+            <h3>Başvuru Süreci</h3>
+            <p>Schengen vizesi başvuru süreci genellikle aşağıdaki adımlardan oluşur:</p>
+            <ul>
+                <li>Başvuru formunun eksiksiz doldurulması</li>
+                <li>Gerekli belgelerin hazırlanması (pasaport, fotoğraf, seyahat sağlık sigortası vb.)</li>
+                <li>Seyahatin amacına uygun ek belgelerin temini (otel rezervasyonu, uçak bileti, davetiye vb.)</li>
+                <li>Vize başvuru merkezinde randevu alınması</li>
+                <li>Biyometrik verilerin (parmak izi ve fotoğraf) alınması</li>
+                <li>Vize ücretinin ödenmesi</li>
+            </ul>
+            
+            <h3>Gerekli Belgeler</h3>
+            <ul>
+                <li>Geçerli pasaport (en az 6 ay geçerlilik süresi olmalı)</li>
+                <li>2 adet biyometrik fotoğraf</li>
+                <li>Seyahat sağlık sigortası (en az 30.000 Euro teminatlı)</li>
+                <li>Uçak bileti rezervasyonu</li>
+                <li>Otel rezervasyonu veya davetiye</li>
+                <li>Maddi durum belgeleri (banka hesap dökümü, maaş bordrosu vb.)</li>
+                <li>İş/öğrenci belgesi</li>
+            </ul>
+            
+            <h3>İşlem Süresi</h3>
+            <p>Normal şartlarda Schengen vizesi başvurularının değerlendirme süresi 15 takvim günüdür. Yoğunluk dönemlerinde bu süre 30-45 güne kadar uzayabilir.</p>
+            
+            <h3>NovaVisa Farkı</h3>
+            <p>NovaVisa olarak Schengen vizesi başvurularında size özel danışmanlık hizmeti sunuyoruz. Belgelerinizin eksiksiz hazırlanması, başvuru formunun doğru doldurulması ve tüm sürecin takibi konusunda uzman ekibimiz yanınızda.</p>
+        </div>
     </div>
-    <div id="mobileMenu" style="display:none;padding:10px 20px;border-top:1px solid #eef2ff;background:#fff">
-      <div style="display:flex;flex-direction:column;gap:8px">
-        <a href="#services">Hizmetler</a>
-        <a href="#about">Hakkımızda</a>
-        <a href="#contact">İletişim</a>
-      </div>
+    
+    <!-- ABD Vizesi Detay -->
+    <div id="detail-usa" class="detail-page">
+        <div class="detail-content">
+            <button class="close-btn"><i class="fas fa-times"></i></button>
+            <h2>ABD Vizesi</h2>
+            <p>Amerika Birleşik Devletleri'ne seyahat etmek isteyen Türk vatandaşlarının vize alması gerekmektedir. ABD vizesi başvuruları diğer ülkelere göre daha detaylı bir süreç içerir.</p>
+            
+            <h3>Vize Türleri</h3>
+            <p>ABD'ye seyahat amacınıza göre farklı vize türleri bulunmaktadır:</p>
+            <ul>
+                <li><strong>B-1/B-2 Vizesi:</strong> Turistik ve iş seyahatleri için</li>
+                <li><strong>F-1 Vizesi:</strong> Öğrenciler için</li>
+                <li><strong>J-1 Vizesi:</strong> Değişim programları için</li>
+                <li><strong>H-1B Vizesi:</strong> Özel meslek sahipleri için çalışma vizesi</li>
+                <li><strong>L-1 Vizesi:</strong> Şirket içi transfer için</li>
+            </ul>
+            
+            <h3>Başvuru Süreci</h3>
+            <p>ABD vizesi başvuru süreci şu adımlardan oluşur:</p>
+            <ul>
+                <li>DS-160 online başvuru formunun doldurulması</li>
+                <li>Vize başvuru ücretinin ödenmesi</li>
+                <li>Konsoloslukta mülakat randevusunun alınması</li>
+                <li>Gerekli belgelerin hazırlanması</li>
+                <li>Konsolosluk mülakatına katılma</li>
+                <li>Pasaportun iade edilmesi ve vize sonucunun alınması</li>
+            </ul>
+            
+            <h3>Mülakat İpuçları</h3>
+            <p>ABD vizesi mülakatında dikkat etmeniz gerekenler:</p>
+            <ul>
+                <li>Samimi ve net cevaplar verin</li>
+                <li>Seyahat amacınızı açıkça ifade edin</li>
+                <li>Türkiye'ye dönme niyetinizi güçlü argümanlarla destekleyin</li>
+                <li>Gerekli tüm belgeleri yanınızda bulundurun</li>
+                <li>Rahat ve profesyonel bir görünüm sergileyin</li>
+            </ul>
+        </div>
     </div>
-  </header>
-
-  <main>
-    <section class="hero">
-      <div class="container">
-        <h1>NovaVisa ile Vize Süreciniz Güvende</h1>
-        <p>Profesyonel danışmanlık, hızlı süreç yönetimi ve güvenilir rehberlik ile dünya ülkelerine vize başvurularınızı kolaylaştırıyoruz.</p>
-        <p><a class="btn" href="#contact">Hemen İletişime Geç</a></p>
-      </div>
-    </section>
-
-    <section id="services" class="section">
-      <div class="container">
-        <h2>Hizmetlerimiz</h2>
-        <div class="cards">
-          <div class="card">
-            <div style="font-size:28px">✔</div>
-            <h3>Turistik Vize</h3>
-            <p>Turistik vize başvurularında profesyonel evrak hazırlama, randevu alma ve süreç takibi hizmeti sunuyoruz.</p>
-          </div>
-          <div class="card">
-            <div style="font-size:28px">✔</div>
-            <h3>Öğrenci Vizesi</h3>
-            <p>Öğrenci vizesi başvurularında danışmanlık, üniversite evrakları desteği ve takip sağlıyoruz.</p>
-          </div>
-          <div class="card">
-            <div style="font-size:28px">✔</div>
-            <h3>Çalışma Vizesi</h3>
-            <p>Çalışma vizesi süreçlerinde işveren belgeleri, başvuru takibi ve sınırlı danışmanlık hizmeti veriyoruz.</p>
-          </div>
+    
+    <!-- Öğrenci Vizesi Detay -->
+    <div id="detail-student" class="detail-page">
+        <div class="detail-content">
+            <button class="close-btn"><i class="fas fa-times"></i></button>
+            <h2>Öğrenci Vizesi</h2>
+            <p>Yurtdışında eğitim almak isteyen öğrenciler için özel olarak tasarlanmış vize türüdür. Öğrenci vizesi, eğitim süresi boyunca ülkede kalma ve eğitim alma hakkı verir.</p>
+            
+            <h3>Öğrenci Vizesi Türleri</h3>
+            <ul>
+                <li><strong>F-1 Vizesi (ABD):</strong> Akademik programlar için</li>
+                <li><strong>M-1 Vizesi (ABD):</strong> Mesleki eğitim programları için</li>
+                <li><strong>Tier 4 Vizesi (İngiltere):</strong> İngiltere'de eğitim için</li>
+                <li><strong>Öğrenci Vizesi (Kanada):</strong> Kanada'da eğitim için</li>
+                <li><strong>Öğrenci Vizesi (Avustralya):</strong> Avustralya'da eğitim için</li>
+            </ul>
+            
+            <h3>Gerekli Belgeler</h3>
+            <ul>
+                <li>Kabul mektubu (okuldan alınan resmi kabul belgesi)</li>
+                <li>Maddi durum belgeleri (eğitim ve yaşam masraflarını karşılayabileceğinizi gösteren belgeler)</li>
+                <li>Eğitim geçmişi belgeleri (diploma, transkript)</li>
+                <li>Dil yeterlilik belgesi (TOEFL, IELTS vb.)</li>
+                <li>Sağlık sigortası</li>
+                <li>Vize başvuru formu ve ücreti</li>
+            </ul>
+            
+            <h3>Öğrenci Vizesi Avantajları</h3>
+            <p>Öğrenci vizesi ile yurtdışında eğitim almanın bazı avantajları:</p>
+            <ul>
+                <li>Eğitim süresince part-time çalışma izni (ülkeye göre değişir)</li>
+                <li>Mezuniyet sonrası çalışma izni (ülkeye göre değişir)</li>
+                <li>Uluslararası deneyim ve kariyer fırsatları</li>
+                <li>Kültürel entegrasyon ve dil gelişimi</li>
+            </ul>
+            
+            <h3>NovaVisa Desteği</h3>
+            <p>NovaVisa olarak öğrenci vizesi başvurularında size kapsamlı destek sunuyoruz. Okul seçiminden başvuru sürecine, belge hazırlığından vize mülakatına kadar tüm aşamalarda yanınızdayız.</p>
         </div>
-      </div>
-    </section>
-
-    <section id="about" class="section" style="background:transparent;">
-      <div class="container about">
-        <div>
-          <h2>NovaVisa Hakkında</h2>
-          <p>NovaVisa, uluslararası seyahatleriniz için ihtiyaç duyduğunuz tüm vize süreçlerinde size rehberlik eden profesyonel bir danışmanlık şirketidir. Deneyimli ekibimiz ile süreci en hızlı ve sorunsuz şekilde yönetiyoruz.</p>
+    </div>
+    
+    <!-- İş Vizesi Detay -->
+    <div id="detail-work" class="detail-page">
+        <div class="detail-content">
+            <button class="close-btn"><i class="fas fa-times"></i></button>
+            <h2>İş Vizesi</h2>
+            <p>Yurtdışında çalışmak, iş toplantılarına katılmak veya şirket içi transfer için ihtiyaç duyulan vize türüdür. İş vizesi, belirli bir süre için yabancı bir ülkede çalışma izni verir.</p>
+            
+            <h3>İş Vizesi Türleri</h3>
+            <ul>
+                <li><strong>H-1B Vizesi (ABD):</strong> Özel meslek sahipleri için</li>
+                <li><strong>L-1 Vizesi (ABD):</strong> Şirket içi transfer için</li>
+                <li><strong>Tier 2 Vizesi (İngiltere):</strong> İngiltere'de çalışmak için</li>
+                <li><strong>İş Vizesi (Kanada):</strong> Kanada'da çalışmak için</li>
+                <li><strong>İş Vizesi (Almanya):</strong> Almanya'da çalışmak için</li>
+            </ul>
+            
+            <h3>Başvuru Süreci</h3>
+            <p>İş vizesi başvuru süreci genellikle şu adımlardan oluşur:</p>
+            <ul>
+                <li>İşveren tarafından çalışma izni başvurusu</li>
+                <li>Çalışma izninin onaylanması</li>
+                <li>Vize başvuru formunun doldurulması</li>
+                <li>Gerekli belgelerin hazırlanması</li>
+                <li>Konsolosluk randevusunun alınması</li>
+                <li>Mülakat ve vize sonucunun alınması</li>
+            </ul>
+            
+            <h3>Gerekli Belgeler</h3>
+            <ul>
+                <li>İşveren mektubu (çalışma teklifi ve pozisyon detayları)</li>
+                <li>Çalışma izni belgesi</li>
+                <li>Eğitim ve iş deneyimi belgeleri</li>
+                <li>Maddi durum belgeleri</li>
+                <li>Sağlık sigortası</li>
+                <li>Pasaport ve fotoğraflar</li>
+            </ul>
+            
+            <h3>NovaVisa Hizmetleri</h3>
+            <p>NovaVisa olarak iş vizesi başvurularında şu hizmetleri sunuyoruz:</p>
+            <ul>
+                <li>İşveren ile iletişim ve belge hazırlığı desteği</li>
+                <li>Çalışma izni başvuru süreci takibi</li>
+                <li>Vize başvuru formu hazırlama</li>
+                <li>Mülakat hazırlığı ve provaları</li>
+                <li>Tüm sürecin profesyonel yönetimi</li>
+            </ul>
         </div>
-        <div>
-          <img src="https://images.unsplash.com/photo-1522199755839-a2bacb67c546?w=1200&q=80&auto=format&fit=crop" alt="Vize danışmanlığı görseli">
+    </div>
+    
+    <!-- Turist Vizesi Detay -->
+    <div id="detail-tourist" class="detail-page">
+        <div class="detail-content">
+            <button class="close-btn"><i class="fas fa-times"></i></button>
+            <h2>Turist Vizesi</h2>
+            <p>Turist vizesi, bir ülkeyi turistik amaçlarla ziyaret etmek isteyenler için gereklidir. Genellikle kısa süreli ziyaretler için verilir ve çalışma izni içermez.</p>
+            
+            <h3>Popüler Turist Vizesi Ülkeleri</h3>
+            <ul>
+                <li><strong>ABD B-2 Vizesi:</strong> Amerika'ya turistik ziyaretler için</li>
+                <li><strong>Schengen C Vizesi:</strong> Avrupa ülkelerine turistik ziyaretler için</li>
+                <li><strong>İngiltere Turist Vizesi:</strong> İngiltere'ye turistik ziyaretler için</li>
+                <li><strong>Kanada Turist Vizesi:</strong> Kanada'ya turistik ziyaretler için</li>
+                <li><strong>Avustralya Turist Vizesi:</strong> Avustralya'ya turistik ziyaretler için</li>
+            </ul>
+            
+            <h3>Gerekli Belgeler</h3>
+            <ul>
+                <li>Gezi planı ve seyahat programı</li>
+                <li>Uçak bileti rezervasyonu</li>
+                <li>Otel rezervasyonu veya konaklama belgeleri</li>
+                <li>Maddi durum belgeleri (seyahat masraflarını karşılayabileceğinizi gösteren belgeler)</li>
+                <li>İş/öğrenci belgesi</li>
+                <li>Seyahat sağlık sigortası</li>
+            </ul>
+            
+            <h3>Seyahat Planı Hazırlama</h3>
+            <p>Turist vizesi başvurularında seyahat planınız çok önemlidir. Planınız şunları içermelidir:</p>
+            <ul>
+                <li>Seyahat tarihleri ve süresi</li>
+                <li>Ziyaret edilecek şehirler ve turistik yerler</li>
+                <li>Konaklama detayları</li>
+                <li>Ulaşım planı</li>
+                <li>Bütçe planlaması</li>
+            </ul>
+            
+            <h3>NovaVisa Desteği</h3>
+            <p>NovaVisa olarak turist vizesi başvurularınızda size özel danışmanlık hizmeti sunuyoruz. Seyahat planınızın hazırlanması, belgelerinizin eksiksiz olması ve başvuru sürecinin sorunsuz ilerlemesi için uzman ekibimiz yanınızda.</p>
         </div>
-      </div>
-    </section>
-
-    <section id="contact" class="section" style="background:#fff;padding-bottom:80px;">
-      <div class="container">
-        <h2 style="text-align:center">İletişim</h2>
-        <div class="contact-grid" style="margin-top:18px">
-          <div class="contact-item"><div style="font-size:20px">📞</div><div><strong>Telefon</strong><div style="color:var(--muted)">+90 5XX XXX XX XX</div></div></div>
-          <div class="contact-item"><div style="font-size:20px">✉️</div><div><strong>E-posta</strong><div style="color:var(--muted)">info@novavisa.com</div></div></div>
-          <div class="contact-item"><div style="font-size:20px">📍</div><div><strong>Adres</strong><div style="color:var(--muted)">İstanbul, Türkiye</div></div></div>
+    </div>
+    
+    <!-- Vize Dosyası Hazırlama Detay -->
+    <div id="detail-documents" class="detail-page">
+        <div class="detail-content">
+            <button class="close-btn"><i class="fas fa-times"></i></button>
+            <h2>Vize Dosyası Hazırlama</h2>
+            <p>Vize başvurularında en önemli aşamalardan biri doğru ve eksiksiz bir vize dosyası hazırlamaktır. NovaVisa olarak, vize dosyanızın kusursuz olması için size profesyonel destek sunuyoruz.</p>
+            
+            <h3>Vize Dosyası İçeriği</h3>
+            <p>Standart bir vize dosyası genellikle şu bölümlerden oluşur:</p>
+            <ul>
+                <li><strong>Kişisel Belgeler:</strong> Pasaport, kimlik, nüfus kayıt örneği, fotoğraflar</li>
+                <li><strong>Maddi Belgeler:</strong> Banka hesap dökümleri, maaş bordrosu, vergi levhası, tapu, ruhsat</li>
+                <li><strong>Mesleki Belgeler:</strong> İş yeri belgesi, SGK işe giriş bildirgesi, imza sirküleri</li>
+                <li><strong>Seyahat Belgeleri:</strong> Uçak bileti rezervasyonu, otel rezervasyonu, seyahat planı</li>
+                <li><strong>Diğer Belgeler:</strong> Seyahat sağlık sigortası, davetiye, ailevi durum belgeleri</li>
+            </ul>
+            
+            <h3>Profesyonel Vize Dosyası Hazırlama Adımları</h3>
+            <ul>
+                <li><strong>Değerlendirme:</strong> Vize türünüze göre gerekli belgelerin belirlenmesi</li>
+                <li><strong>Toplama:</strong> Eksiksiz belgelerin temin edilmesi</li>
+                <li><strong>Düzenleme:</strong> Belgelerin kronolojik sıraya göre düzenlenmesi</li>
+                <li><strong>Çeviri:</strong> Gerekli belgelerin resmi çevirilerinin yapılması</li>
+                <li><strong>Onay:</strong> Apostil ve noter onay işlemlerinin tamamlanması</li>
+                <li><strong>Sunum:</strong> Dosyanın profesyonel şekilde sunuma hazır hale getirilmesi</li>
+            </ul>
+            
+            <h3>NovaVisa Farkı</h3>
+            <p>NovaVisa olarak vize dosyası hazırlama hizmetimizle şunları sunuyoruz:</p>
+            <ul>
+                <li>Kişiye özel belge listesi hazırlama</li>
+                <li>Eksik belgelerin tespiti ve temini için rehberlik</li>
+                <li>Belgelerin doğru formatta hazırlanması</li>
+                <li>Resmi çeviri ve onay işlemlerinin yönetilmesi</li>
+                <li>Profesyonel dosya düzeni ve sunumu</li>
+                <li>Son kontrol ve eksiksizlik garantisi</li>
+            </ul>
         </div>
-      </div>
-    </section>
+    </div>
 
-  </main>
-
-  <footer>
-    <div class="container">© <span id="year"></span> NovaVisa. Tüm hakları saklıdır.</div>
-  </footer>
-
-  <script>
-    // Mobile menu toggle
-    const menuBtn = document.getElementById('menuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    menuBtn.addEventListener('click', ()=>{
-      const open = mobileMenu.style.display === 'block';
-      mobileMenu.style.display = open ? 'none' : 'block';
-      menuBtn.setAttribute('aria-expanded', String(!open));
-    });
-
-    // Set current year
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Smooth scroll for internal links
-    document.querySelectorAll('a[href^="#"]').forEach(a=>{
-      a.addEventListener('click', e=>{
-        const target = a.getAttribute('href');
-        if(target.length>1){
-          e.preventDefault();
-          document.querySelector(target).scrollIntoView({behavior:'smooth',block:'start'});
-          // close mobile menu if open
-          if(window.innerWidth < 768) mobileMenu.style.display='none';
-        }
-      })
-    })
-  </script>
+    <script>
+        // Mobil menü açma/kapama
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            const navMenu = document.querySelector('nav ul');
+            navMenu.classList.toggle('active');
+            
+            // Dropdown menüyü mobilde açma/kapama
+            const dropdown = document.querySelector('.dropdown');
+            if (navMenu.classList.contains('active')) {
+                dropdown.addEventListener('click', function(e) {
+                    if (window.innerWidth <= 768) {
+                        e.preventDefault();
+                        this.classList.toggle('active');
+                    }
+                });
+            }
+        });
+        
+        // Detay sayfalarını açma/kapama
+        const detailButtons = document.querySelectorAll('.detay-btn');
+        const detailPages = document.querySelectorAll('.detail-page');
+        const closeButtons = document.querySelectorAll('.close-btn');
+        
+        detailButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const service = this.getAttribute('data-service');
+                const detailPage = document.getElementById(`detail-${service}`);
+                
+                if (detailPage) {
+                    detailPage.style.display = 'block';
+                    document.body.style.overflow = 'hidden';
+                }
+            });
+        });
+        
+        closeButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const detailPage = this.closest('.detail-page');
+                detailPage.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            });
+        });
+        
+        // Detay sayfalarının dışına tıklandığında kapatma
+        detailPages.forEach(page => {
+            page.addEventListener('click', function(e) {
+                if (e.target === this) {
+                    this.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        });
+        
+        // Yumuşak kaydırma için (nav menü linkleri)
+        document.querySelectorAll('nav a:not(.dropdown-content a)').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const targetId = this.getAttribute('href');
+                
+                if (targetId.startsWith('#')) {
+                    e.preventDefault();
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                        
+                        // Mobil menüyü kapat
+                        if (window.innerWidth <= 768) {
+                            document.querySelector('nav ul').classList.remove('active');
+                            document.querySelector('.dropdown').classList.remove('active');
+                        }
+                    }
+                }
+            });
+        });
+        
+        // Dropdown menü linkleri için yumuşak kaydırma
+        document.querySelectorAll('.dropdown-content a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Mobil menüyü kapat
+                    if (window.innerWidth <= 768) {
+                        document.querySelector('nav ul').classList.remove('active');
+                        document.querySelector('.dropdown').classList.remove('active');
+                    }
+                }
+            });
+        });
+        
+        // Footer'daki hizmet linkleri için yumuşak kaydırma
+        document.querySelectorAll('.service-link').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Sayfa yüklendiğinde URL'deki hash'i kontrol et ve ilgili bölüme kaydır
+        window.addEventListener('load', function() {
+            if (window.location.hash) {
+                const targetId = window.location.hash;
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    setTimeout(() => {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }, 100);
+                }
+            }
+        });
+    </script>
 </body>
 </html>
